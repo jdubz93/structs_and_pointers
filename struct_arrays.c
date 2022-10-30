@@ -18,7 +18,7 @@ typedef struct {
 } person_t[3];
 
 typedef struct {
-  char* pName[50];
+  char* pName;
   date_t* pBirthday;
 } pPerson_t;
 
@@ -78,6 +78,8 @@ int main(void)
        'm','n','o','p','q','r','s','t','u','v'
   };
 
+  // allocate memory to store the name
+  p3->pName = (char*)malloc(strlen(somename)+1);
   strncpy((char*)p3->pName, somename, 50);
 
   uint8_t someday = 4;
