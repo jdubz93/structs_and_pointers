@@ -91,7 +91,17 @@ int main(void)
   uint8_t someday = 4;
   uint8_t somemonth = 5;
   uint16_t someyear = 2022;
+  
+  // allocate memory to store the date
+  p3->pBirthday = (date_t*)malloc(sizeof(date_t));
+  if(!p3->pBirthday)
+  {
+    printf("Error allocating memory.");
+    return 1;
+  }
+  // copy the date to allocated memory space
   p3->pBirthday = &p2[0]->birthday;
+  
   printf("\n");
   printf("pointer to pointer\n");
 
