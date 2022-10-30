@@ -86,7 +86,7 @@ int main(void)
     return 1;
   }
   // copy the name to allocated memory space
-  strncpy((char*)p3->pName, somename, 50);
+  strncpy(p3->pName, somename, 50);
 
   uint8_t someday = 4;
   uint8_t somemonth = 5;
@@ -95,7 +95,7 @@ int main(void)
   printf("\n");
   printf("pointer to pointer\n");
 
-  printf("p3->pName = %s\n", (char*)p3->pName);
+  printf("p3->pName = %s\n", p3->pName);
   printf("p3->pBirthday->day = %d\n", p3->pBirthday->day);
   printf("p3->pBirthday->month = %d\n", p3->pBirthday->month);
   printf("p3->pBirthday->year = %d\n", p3->pBirthday->year);
