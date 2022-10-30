@@ -80,6 +80,12 @@ int main(void)
 
   // allocate memory to store the name
   p3->pName = (char*)malloc(strlen(somename)+1);
+  if(!p3->pName)
+  {
+    printf("Error allocating memory.");
+    return 1;
+  }
+  // copy the name to allocated memory space
   strncpy((char*)p3->pName, somename, 50);
 
   uint8_t someday = 4;
